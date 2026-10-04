@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% block content %}
+<h1 class="text-2xl font-bold mb-6">Analytics Dashboard</h1>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+    <!-- Daily Spending Chart -->
+    <div class="glass-card rounded-xl p-6 h-80">
+        <h3 class="font-bold text-slate-200 mb-4">Daily Spending Pattern</h3>
+        <div class="relative h-64 w-full">
+            <canvas id="dailySpendingChart"></canvas>
+        </div>
+    </div>
+    <!-- Category Spending -->
+    <div class="glass-card rounded-xl p-6 h-80">
+        <h3 class="font-bold text-slate-200 mb-4">Category Breakdown</h3>
+        <div class="relative h-64 w-full flex justify-center">
+            <canvas id="categoryChart"></canvas>
+        </div>
+    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- Fraud vs Genuine -->
+    <div class="glass-card rounded-xl p-6 h-80 md:col-span-2">
+        <h3 class="font-bold text-slate-200 mb-4">Monthly Transactions Overview</h3>
+        <div class="relative h-64 w-full">
+            <canvas id="monthlyChart"></canvas>
+        </div>
+    </div>
+    <!-- Risk Distribution -->
+    <div class="glass-card rounded-xl p-6 h-80">
+        <h3 class="font-bold text-slate-200 mb-4">Fraud Risk Distribution</h3>
+        <div class="relative h-64 w-full flex justify-center">
+            <canvas id="riskChart"></canvas>
+        </div>
+    </div>
+</div>
+{% endblock %}
